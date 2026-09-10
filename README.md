@@ -1,5 +1,7 @@
 # Codex Engineering Workflow
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A repository template for installing an evidence-driven, staged engineering
 workflow into an existing single- or multi-repository Workspace.
 

@@ -94,6 +94,7 @@ required_source_paths=(
   "VERSION"
   "AGENTS.md"
   "README-AI-WORKFLOW.md"
+  "README-AI-WORKFLOW.zh-CN.md"
   "skeleton/ARCHITECTURE.md"
   "skeleton/workspace-status.md"
   ".codex/prompts"
@@ -170,6 +171,7 @@ add_asset() {
 
 add_asset "AGENTS.md" "AGENTS.md"
 add_asset "README-AI-WORKFLOW.md" "README-AI-WORKFLOW.md"
+add_asset "README-AI-WORKFLOW.zh-CN.md" "README-AI-WORKFLOW.zh-CN.md"
 add_asset "skeleton/ARCHITECTURE.md" "ARCHITECTURE.md"
 add_asset "skeleton/workspace-status.md" ".codex/workspace-status.md"
 add_asset "docs/features/README.md" "docs/features/README.md"

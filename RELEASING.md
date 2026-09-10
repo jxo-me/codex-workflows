@@ -1,5 +1,7 @@
 # Release Process
 
+[English](RELEASING.md) | [简体中文](RELEASING.zh-CN.md)
+
 Releases are prepared from a clean review branch and published only after all
 required evidence is available.
 

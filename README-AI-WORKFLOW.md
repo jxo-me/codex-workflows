@@ -1,5 +1,7 @@
 # AI Engineering Workflow
 
+[English](README-AI-WORKFLOW.md) | [简体中文](README-AI-WORKFLOW.zh-CN.md)
+
 ## Install the Workflow
 
 Run the installer from a complete checkout of this repository:

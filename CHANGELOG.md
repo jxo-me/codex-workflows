@@ -1,5 +1,7 @@
 # Changelog
 
+[English](CHANGELOG.md) | [简体中文](CHANGELOG.zh-CN.md)
+
 All notable workflow changes are recorded here. Versions follow Semantic
 Versioning; dates use ISO 8601.
 

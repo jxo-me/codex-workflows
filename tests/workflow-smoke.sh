@@ -71,6 +71,7 @@ required_assets=(
   ".codex/templates/feature-compact/01-requirement.md"
   ".codex/templates/feature-compact/08-retrospective.md"
   ".codex/workflow-install.manifest"
+  "README-AI-WORKFLOW.zh-CN.md"
   "docs/standards/testing.md"
   "scripts/feature-init.sh"
   "scripts/verify-workspace.sh"
