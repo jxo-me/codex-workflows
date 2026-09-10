@@ -21,11 +21,13 @@ DEVELOPMENT
 
 - Version: 0.4.0
 
-Last verified: 2026-09-10 with `bash tests/workflow-smoke.sh`
+Last verified: 2026-09-10 with
+`WORKFLOW_REQUIRE_GOLANGCI_LINT=1 bash tests/workflow-smoke.sh`
 
 - Release metadata verification: PASS
 - ShellCheck 0.11.0: PASS
 - actionlint 1.7.12: PASS
+- golangci-lint 2.13.2: PASS
 
 ## Known Gaps
 

@@ -21,7 +21,7 @@
 
 ```bash
 bash scripts/verify-release.sh
-bash tests/workflow-smoke.sh
+WORKFLOW_REQUIRE_GOLANGCI_LINT=1 bash tests/workflow-smoke.sh
 shellcheck scripts/*.sh tests/*.sh
 actionlint .github/workflows/ci.yml
 ```

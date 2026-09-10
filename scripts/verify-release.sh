@@ -30,8 +30,15 @@ changelog_has_version() {
     "${ROOT}/CHANGELOG.md"
 }
 
+translated_changelog_has_version() {
+  local escaped_version="${WORKFLOW_VERSION//./\\.}"
+  grep -Eq "^## \\[${escaped_version}\\] - [0-9]{4}-[0-9]{2}-[0-9]{2}$" \
+    "${ROOT}/CHANGELOG.zh-CN.md"
+}
+
 check "VERSION is stable Semantic Versioning" version_is_valid
 check "CHANGELOG contains VERSION" changelog_has_version
+check "Chinese CHANGELOG contains VERSION" translated_changelog_has_version
 check "source status contains VERSION" grep -Fqx -- "- Version: ${WORKFLOW_VERSION}" "${ROOT}/.codex/workspace-status.md"
 check "source architecture is DEVELOPMENT" grep -Fqx 'Status: DEVELOPMENT' "${ROOT}/ARCHITECTURE.md"
 check "target architecture is NOT_INITIALIZED" grep -Fqx 'Status: NOT_INITIALIZED' "${ROOT}/skeleton/ARCHITECTURE.md"

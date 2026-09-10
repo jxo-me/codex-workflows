@@ -12,6 +12,8 @@ Versioning; dates use ISO 8601.
 - CI now installs a pinned golangci-lint and requires Go lint execution instead
   of accepting a skipped lint gate.
 - CI now covers develop pushes and cancels superseded runs with a job timeout.
+- Release instructions now require the Go lint gate, and release metadata
+  verification checks the Chinese changelog version.
 
 ## [0.4.0] - 2026-09-10
 
