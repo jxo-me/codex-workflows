@@ -574,7 +574,7 @@ After retrospective, verify whether the following need updates:
 * [ ] `docs/domain/`
 * [ ] `docs/standards/`
 * [ ] `docs/runbooks/`
-* [ ] `.codex/skills/`
+* [ ] `.agents/skills/`
 * [ ] `.codex/templates/`
 * [ ] scripts / automation
 

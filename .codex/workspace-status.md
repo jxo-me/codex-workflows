@@ -1,25 +1,32 @@
-# Workspace Initialization Status
+# Template Repository Status
 
 ## Initialization
 
-- [ ] Skeleton created
-- [ ] Repository discovery
-- [ ] Repository analysis
-- [ ] Architecture analysis
-- [ ] Domain analysis
-- [ ] Engineering standards analysis
-- [ ] Documentation verification
-- [ ] AGENTS.md finalized
+- [x] Workflow source repository identified
+- [x] Installer smoke test added
+- [x] Core skills and prompts added
+- [x] Target workspace state separated into `skeleton/`
+- [x] Managed upgrade manifest added
+- [x] Retired asset audit history added
+- [x] Compact and extended Feature profiles added
+- [x] CI smoke workflow added
+- [x] Release consistency checks added
+- [ ] First stable release
 
 ## Workspace Status
 
-READY
+DEVELOPMENT
 
-Last verified:
+- Version: 0.3.0
 
-2026-09-09
+Last verified: 2026-09-10 with `bash tests/workflow-smoke.sh`
+
+- Release metadata verification: PASS
+- ShellCheck 0.11.0: PASS
+- actionlint 1.7.12: PASS
 
 ## Known Gaps
 
-- xxx
-- xxx
+- The repository has not reached a stable release.
+- CI and release evidence must be kept current for each published version.
+- UNKNOWN: hosted GitHub Actions has not run until these changes are pushed.

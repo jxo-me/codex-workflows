@@ -12,3 +12,14 @@ FEATURE-ID/
 ├── 06-test-plan.md
 ├── 07-delivery-checklist.md
 └── 08-retrospective.md
+
+Create the detailed, backward-compatible profile with:
+
+    ./scripts/feature-init.sh FEATURE-ID
+
+Create the concise profile for routine changes with:
+
+    ./scripts/feature-init.sh --profile compact FEATURE-ID
+
+Both profiles preserve the same eight-stage lifecycle and filenames, so prompts
+and review gates remain compatible.

@@ -1,3 +1,5 @@
+> **文档状态：设计参考。** 本文保留工作流方法论和设计背景；当前可执行命令、目录位置及兼容性约定以根目录 `README.md`、`README-AI-WORKFLOW.md` 和 `scripts/` 为准。
+
 可以把这件事做成一套真正可复制的 **AI-assisted SDLC**，而不是“拿需求丢给 Codex，让它改代码”。
 
 你现在这种场景——**资深 Go 后端 + IDEA 多工程 + 多 Git 仓库 + 已有成熟系统 + 产品原型/需求文档 + Codex**——最适合建立下面这条链路：
@@ -1571,7 +1573,7 @@ Feature 10
 先建立这 **8 个核心工程 Skill**：
 
 ```text
-.skills/
+.agents/skills/
 │
 ├── requirement-analysis/
 │
@@ -1780,15 +1782,16 @@ workspace/
 │           ├── 07-delivery-checklist.md
 │           └── 08-retrospective.md
 │
-├── .skills/
-│   ├── requirement-analysis/
-│   ├── repository-analysis/
-│   ├── impact-analysis/
-│   ├── architecture-design/
-│   ├── go-implementation/
-│   ├── go-testing/
-│   ├── code-review/
-│   └── delivery-review/
+├── .agents/
+│   └── skills/
+│       ├── requirement-analysis/
+│       ├── repository-analysis/
+│       ├── impact-analysis/
+│       ├── architecture-design/
+│       ├── go-implementation/
+│       ├── go-testing/
+│       ├── code-review/
+│       └── delivery-review/
 │
 ├── gateway/
 ├── game-service/

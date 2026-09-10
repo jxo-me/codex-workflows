@@ -46,6 +46,8 @@ Read:
 - docs/architecture/
 - docs/domain/
 - docs/standards/
+- .agents/skills/
+- .codex/prompts/
 
 Feature work lives under:
 

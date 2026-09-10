@@ -1,7 +1,9 @@
+> **文档状态：设计参考。** 本文是最初的初始化方案，部分代码片段用于解释设计而非直接执行；当前行为以根目录 `README.md`、`README-AI-WORKFLOW.md` 和 `scripts/` 为准。仓库级 Skill 使用当前 Codex 可发现位置 `.agents/skills/`。
+
 可以，而且我建议你不要手工一次次创建。最适合的是做成一个**项目初始化器 + Codex 分阶段填充流程**。目标是任何新 Workspace 第一次接入时，只需要执行一次：
 
 ```bash
-./codex-workflow-init.sh
+bash scripts/codex-workflow-init.sh
 ```
 
 然后让 Codex 按固定顺序扫描、分析、填充，最终形成开箱即用的工程骨架。
@@ -65,24 +67,25 @@ workspace/
 │   │   ├── 04-standards-analysis.md
 │   │   ├── 05-verification.md
 │   │   ├── feature-start.md
+│   │   ├── feature-current-system.md
 │   │   ├── feature-impact.md
 │   │   ├── feature-design.md
 │   │   ├── feature-implement.md
 │   │   ├── feature-review.md
 │   │   └── feature-delivery.md
 │   │
-│   ├── templates/
-│   │   ├── feature/
-│   │   │   ├── 01-requirement.md
-│   │   │   ├── 02-current-system.md
-│   │   │   ├── 03-impact-analysis.md
-│   │   │   ├── 04-solution-design.md
-│   │   │   ├── 05-implementation-plan.md
-│   │   │   ├── 06-test-plan.md
-│   │   │   ├── 07-delivery-checklist.md
-│   │   │   └── 08-retrospective.md
-│   │   └── adr.md
-│   │
+│   └── templates/
+│       └── feature/
+│           ├── 01-requirement.md
+│           ├── 02-current-system.md
+│           ├── 03-impact-analysis.md
+│           ├── 04-solution-design.md
+│           ├── 05-implementation-plan.md
+│           ├── 06-test-plan.md
+│           ├── 07-delivery-checklist.md
+│           └── 08-retrospective.md
+│
+├── .agents/
 │   └── skills/
 │       ├── requirement-analysis/
 │       │   └── SKILL.md
@@ -153,14 +156,14 @@ mkdir -p \
   "${ROOT}/docs/generated" \
   "${ROOT}/.codex/prompts" \
   "${ROOT}/.codex/templates/feature" \
-  "${ROOT}/.codex/skills/requirement-analysis" \
-  "${ROOT}/.codex/skills/repository-analysis" \
-  "${ROOT}/.codex/skills/impact-analysis" \
-  "${ROOT}/.codex/skills/architecture-design" \
-  "${ROOT}/.codex/skills/go-implementation" \
-  "${ROOT}/.codex/skills/go-testing" \
-  "${ROOT}/.codex/skills/code-review" \
-  "${ROOT}/.codex/skills/delivery-review" \
+  "${ROOT}/.agents/skills/requirement-analysis" \
+  "${ROOT}/.agents/skills/repository-analysis" \
+  "${ROOT}/.agents/skills/impact-analysis" \
+  "${ROOT}/.agents/skills/architecture-design" \
+  "${ROOT}/.agents/skills/go-implementation" \
+  "${ROOT}/.agents/skills/go-testing" \
+  "${ROOT}/.agents/skills/code-review" \
+  "${ROOT}/.agents/skills/delivery-review" \
   "${ROOT}/scripts"
 
 touch "${ROOT}/docs/generated/.gitkeep"
@@ -1541,7 +1544,7 @@ Skills 的定位本来就是把重复、多步骤、固定格式的 workflow 封
 例如：
 
 ```text
-.codex/skills/impact-analysis/SKILL.md
+.agents/skills/impact-analysis/SKILL.md
 ```
 
 可以写：
