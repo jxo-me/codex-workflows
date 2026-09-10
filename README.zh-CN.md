@@ -91,6 +91,10 @@
 执行 golangci-lint。如果未发现 Go Module，验证默认失败；仅当这是预期
 情况时，才能显式使用 `--allow-no-go-modules`。
 
+发布或 CI 门禁不允许跳过 Go lint 时，使用：
+
+    ./scripts/verify-workspace.sh --require-golangci-lint /path/to/workspace
+
 运行安装器和 Feature 生命周期回归测试：
 
     bash tests/workflow-smoke.sh

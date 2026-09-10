@@ -4,17 +4,21 @@ set -uo pipefail
 usage() {
   cat <<'EOF'
 Usage:
-  verify-workspace.sh [--allow-no-go-modules] [--quick] [WORKSPACE_ROOT]
+  verify-workspace.sh [--allow-no-go-modules] [--quick]
+                      [--require-golangci-lint] [WORKSPACE_ROOT]
 
 Options:
   --allow-no-go-modules  Report success when no go.mod files are found.
   --quick                Skip the race detector.
+  --require-golangci-lint
+                         Fail when golangci-lint is not installed.
   -h, --help             Show this help text.
 EOF
 }
 
 ALLOW_NO_MODULES=0
 QUICK=0
+REQUIRE_GOLANGCI_LINT=0
 ROOT_INPUT=""
 
 while [[ "$#" -gt 0 ]]; do
@@ -24,6 +28,9 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     --quick)
       QUICK=1
+      ;;
+    --require-golangci-lint)
+      REQUIRE_GOLANGCI_LINT=1
       ;;
     -h|--help)
       usage
@@ -79,6 +86,11 @@ fi
 if ! command -v go >/dev/null 2>&1; then
   echo "Result: FAILED (go executable not found)" >&2
   exit 6
+fi
+
+if [[ "${REQUIRE_GOLANGCI_LINT}" -eq 1 ]] && ! command -v golangci-lint >/dev/null 2>&1; then
+  echo "Result: FAILED (golangci-lint executable not found but required)" >&2
+  exit 8
 fi
 
 FAILED=0

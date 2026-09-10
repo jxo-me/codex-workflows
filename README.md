@@ -81,6 +81,10 @@ This runs tests, the race detector, vet, and golangci-lint when it is installed
 for every discovered Go module. A Workspace with no Go modules fails unless
 --allow-no-go-modules is explicitly supplied.
 
+For a release or CI gate that must not skip Go linting, use:
+
+    ./scripts/verify-workspace.sh --require-golangci-lint /path/to/workspace
+
 Run the installer and Feature lifecycle regression suite:
 
     bash tests/workflow-smoke.sh

@@ -35,6 +35,7 @@ Feature ID 只能包含字母、数字、点、下划线和连字符，并且必
 - 退出码 5：没有发现 Go Module；仅在确定不是 Go Workspace 时使用
   `--allow-no-go-modules`。
 - 退出码 6：找不到 Go。
+- 退出码 8：指定了 `--require-golangci-lint`，但找不到 golangci-lint。
 - 退出码 1：至少一个测试、race、vet 或 lint 检查失败。
 - `PASSED_WITH_SKIPS` 不是完整通过，需要判断缺失工具是否属于发布门禁。
 

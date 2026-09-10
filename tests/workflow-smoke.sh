@@ -225,9 +225,22 @@ func TestReady(t *testing.T) {
 }
 EOF
 
+  REQUIRED_TOOL_PATH="${TMP_ROOT}/required-tool-path"
+  mkdir -p -- "${REQUIRED_TOOL_PATH}"
+  ln -s -- "$(command -v go)" "${REQUIRED_TOOL_PATH}/go"
+  ln -s -- "$(command -v find)" "${REQUIRED_TOOL_PATH}/find"
+  ln -s -- "$(command -v sort)" "${REQUIRED_TOOL_PATH}/sort"
+  expect_status 8 env PATH="${REQUIRED_TOOL_PATH}" /bin/bash \
+    "${WORKSPACE}/scripts/verify-workspace.sh" --require-golangci-lint "${GO_WORKSPACE}"
+
+  VERIFY_OPTIONS=()
+  if [[ "${WORKFLOW_REQUIRE_GOLANGCI_LINT:-0}" == "1" ]]; then
+    VERIFY_OPTIONS+=("--require-golangci-lint")
+  fi
+
   GOCACHE="${TMP_ROOT}/go-build-cache" \
     GOLANGCI_LINT_CACHE="${TMP_ROOT}/golangci-lint-cache" \
-    "${WORKSPACE}/scripts/verify-workspace.sh" "${GO_WORKSPACE}"
+    "${WORKSPACE}/scripts/verify-workspace.sh" "${VERIFY_OPTIONS[@]}" "${GO_WORKSPACE}"
 else
   echo "SKIP: Go verification fixture (go executable not found)"
 fi

@@ -7,6 +7,12 @@ Versioning; dates use ISO 8601.
 
 ## [Unreleased]
 
+### Fixed
+
+- CI now installs a pinned golangci-lint and requires Go lint execution instead
+  of accepting a skipped lint gate.
+- CI now covers develop pushes and cancels superseded runs with a job timeout.
+
 ## [0.4.0] - 2026-09-10
 
 ### Added
