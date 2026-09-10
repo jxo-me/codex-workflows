@@ -66,6 +66,10 @@ required_assets=(
   ".codex/prompts/feature-implement.md"
   ".codex/prompts/feature-review.md"
   ".codex/prompts/feature-delivery.md"
+  ".codex/prompts/feature-plan.md"
+  ".codex/prompts/feature-test.md"
+  ".codex/prompts/feature-retrospective.md"
+  ".codex/prompts/06-agents-finalization.md"
   ".codex/templates/feature/01-requirement.md"
   ".codex/templates/feature/08-retrospective.md"
   ".codex/templates/feature-compact/01-requirement.md"
@@ -73,6 +77,12 @@ required_assets=(
   ".codex/workflow-install.manifest"
   "README-AI-WORKFLOW.zh-CN.md"
   "docs/standards/testing.md"
+  "docs/architecture/workspace-inventory.md"
+  "docs/guides/first-run.zh-CN.md"
+  "docs/guides/workspace-bootstrap.zh-CN.md"
+  "docs/guides/feature-development.zh-CN.md"
+  "docs/guides/phase-gates.zh-CN.md"
+  "docs/guides/troubleshooting.zh-CN.md"
   "scripts/feature-init.sh"
   "scripts/verify-workspace.sh"
 )
@@ -81,6 +91,11 @@ for relative_path in "${required_assets[@]}"; do
   [[ -s "${WORKSPACE}/${relative_path}" ]] ||
     fail "missing installed asset: ${relative_path}"
 done
+
+grep -q 'docs/architecture/workspace-inventory.md' "${WORKSPACE}/.codex/prompts/00-bootstrap.md" ||
+  fail "bootstrap prompt does not use the independent inventory artifact"
+grep -q 'docs/generated/documentation-verification.md' "${WORKSPACE}/.codex/prompts/05-verification.md" ||
+  fail "documentation verification prompt has no fixed report output"
 
 cmp -s -- "${SOURCE_ROOT}/skeleton/ARCHITECTURE.md" "${WORKSPACE}/ARCHITECTURE.md" ||
   fail "target architecture did not come from the workspace skeleton"

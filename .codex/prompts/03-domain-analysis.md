@@ -49,3 +49,7 @@ Every business rule must reference evidence where possible.
 Mark uncertain business semantics:
 
 NEEDS_PRODUCT_CONFIRMATION
+
+Update `.codex/workspace-status.md`. Mark `Domain analysis` complete only when
+all meaningful discovered domains are documented and unresolved semantics are
+explicitly recorded.

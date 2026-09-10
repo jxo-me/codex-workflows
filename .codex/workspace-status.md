@@ -11,13 +11,15 @@
 - [x] Compact and extended Feature profiles added
 - [x] CI smoke workflow added
 - [x] Release consistency checks added
+- [x] Chinese first-run and lifecycle guides added
+- [x] Bootstrap and Feature phase gaps completed
 - [ ] First stable release
 
 ## Workspace Status
 
 DEVELOPMENT
 
-- Version: 0.3.0
+- Version: 0.4.0
 
 Last verified: 2026-09-10 with `bash tests/workflow-smoke.sh`
 

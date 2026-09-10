@@ -7,6 +7,21 @@ Versioning; dates use ISO 8601.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-09-10
+
+### Added
+
+- Chinese first-run, Workspace bootstrap, phase-gate, Feature development, and
+  troubleshooting guides.
+- Dedicated prompts for AGENTS finalization, implementation planning, test
+  execution, and retrospective knowledge capture.
+- A separate Workspace discovery inventory artifact.
+
+### Changed
+
+- Bootstrap prompts now define phase outputs, completion criteria, and
+  `.codex/workspace-status.md` transitions.
+
 ## [0.3.0] - 2026-09-10
 
 ### Added

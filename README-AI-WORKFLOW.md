@@ -43,6 +43,7 @@ Run Codex prompts in this order:
 4. .codex/prompts/03-domain-analysis.md
 5. .codex/prompts/04-standards-analysis.md
 6. .codex/prompts/05-verification.md
+7. .codex/prompts/06-agents-finalization.md
 
 Repository-scoped reusable workflows live under:
 
@@ -76,12 +77,12 @@ Then execute:
 2. .codex/prompts/feature-current-system.md
 3. .codex/prompts/feature-impact.md
 4. .codex/prompts/feature-design.md
-5. complete and approve 05-implementation-plan.md
+5. .codex/prompts/feature-plan.md, then approve 05-implementation-plan.md
 6. .codex/prompts/feature-implement.md for one task at a time
-7. complete and execute 06-test-plan.md
+7. .codex/prompts/feature-test.md
 8. .codex/prompts/feature-review.md
 9. .codex/prompts/feature-delivery.md
-10. complete 08-retrospective.md and capture reusable knowledge
+10. .codex/prompts/feature-retrospective.md
 
 ## Verification
 

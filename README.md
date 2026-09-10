@@ -17,6 +17,7 @@ The current implementation provides:
 - compact and extended eight-document Feature profiles
 - multi-module Go verification
 - GitHub Actions smoke verification
+- installed Chinese first-run and lifecycle operation guides
 
 ## Requirements
 

@@ -105,6 +105,7 @@ required_source_paths=(
   "docs/standards"
   "docs/adr"
   "docs/features/README.md"
+  "docs/guides"
   "docs/runbooks"
   "scripts/feature-init.sh"
   "scripts/verify-workspace.sh"
@@ -188,6 +189,7 @@ asset_directories=(
   "docs/domain"
   "docs/standards"
   "docs/adr"
+  "docs/guides"
   "docs/runbooks"
 )
 

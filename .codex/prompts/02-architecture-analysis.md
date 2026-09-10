@@ -35,6 +35,7 @@ docs/architecture/data-flow.md
 docs/architecture/event-flow.md
 docs/architecture/database-map.md
 docs/architecture/runtime-map.md
+.codex/workspace-status.md
 
 Identify:
 
@@ -63,3 +64,6 @@ eventual consistency
 Every important claim must reference code evidence.
 
 Never manufacture missing architecture.
+
+Mark `Architecture analysis` complete only when every discovered repository is
+represented and all material flows either have evidence or an explicit gap.

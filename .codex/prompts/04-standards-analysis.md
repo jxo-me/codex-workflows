@@ -48,3 +48,7 @@ docs/standards/delivery.md
 Prefer describing existing successful patterns.
 
 Do not rewrite application code.
+
+Update `.codex/workspace-status.md`. Mark `Engineering standards analysis`
+complete only when every listed standards document distinguishes established,
+legacy, inconsistent, and risky patterns using repository evidence.

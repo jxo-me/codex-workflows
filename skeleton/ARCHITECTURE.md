@@ -6,6 +6,7 @@ This file is the high-level architecture entry point for the target workspace.
 
 Detailed architecture lives under:
 
+- docs/architecture/workspace-inventory.md
 - docs/architecture/system-map.md
 - docs/architecture/repository-map.md
 - docs/architecture/service-dependencies.md

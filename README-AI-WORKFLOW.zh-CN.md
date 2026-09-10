@@ -39,6 +39,10 @@ bash scripts/codex-workflow-init.sh --upgrade /path/to/workspace
 4. `.codex/prompts/03-domain-analysis.md`
 5. `.codex/prompts/04-standards-analysis.md`
 6. `.codex/prompts/05-verification.md`
+7. `.codex/prompts/06-agents-finalization.md`
+
+首次执行前请阅读
+[Workspace 初始化手册](docs/guides/workspace-bootstrap.zh-CN.md)。
 
 仓库级可复用工作流位于：
 
@@ -72,12 +76,15 @@ bash scripts/codex-workflow-init.sh --upgrade /path/to/workspace
 2. `.codex/prompts/feature-current-system.md`
 3. `.codex/prompts/feature-impact.md`
 4. `.codex/prompts/feature-design.md`
-5. 完成并批准 `05-implementation-plan.md`
+5. 执行 `.codex/prompts/feature-plan.md`，然后批准 `05-implementation-plan.md`
 6. 使用 `.codex/prompts/feature-implement.md`，每次只实现一个任务
-7. 完成并执行 `06-test-plan.md`
+7. `.codex/prompts/feature-test.md`
 8. `.codex/prompts/feature-review.md`
 9. `.codex/prompts/feature-delivery.md`
-10. 完成 `08-retrospective.md` 并沉淀可复用知识
+10. `.codex/prompts/feature-retrospective.md`
+
+各阶段操作和返回规则见
+[Feature 开发操作手册](docs/guides/feature-development.zh-CN.md)。
 
 ## 验证
 

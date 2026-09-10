@@ -23,3 +23,17 @@ Create the concise profile for routine changes with:
 
 Both profiles preserve the same eight-stage lifecycle and filenames, so prompts
 and review gates remain compatible.
+
+Prompt mapping:
+
+1. `feature-start.md`
+2. `feature-current-system.md`
+3. `feature-impact.md`
+4. `feature-design.md`
+5. `feature-plan.md`
+6. `feature-implement.md`, followed by `feature-test.md`
+7. `feature-review.md`, followed by `feature-delivery.md`
+8. `feature-retrospective.md`
+
+Chinese operating instructions are available in
+`docs/guides/feature-development.zh-CN.md`.

@@ -18,6 +18,19 @@
 - 多 Go Module 验证
 - GitHub Actions 冒烟验证
 
+## 从这里开始
+
+- 第一次安装和初始化，请阅读
+  [首次使用指南](docs/guides/first-run.zh-CN.md)。
+- 完整的八阶段初始化流程见
+  [Workspace 初始化手册](docs/guides/workspace-bootstrap.zh-CN.md)。
+- 日常需求开发见
+  [Feature 开发操作手册](docs/guides/feature-development.zh-CN.md)。
+- 阶段完成条件见
+  [阶段门禁与状态规则](docs/guides/phase-gates.zh-CN.md)。
+- 安装、升级或验证失败时见
+  [故障排查手册](docs/guides/troubleshooting.zh-CN.md)。
+
 ## 环境要求
 
 - Linux

@@ -48,6 +48,10 @@ NEEDS_VERIFICATION
 
 Update only:
 
-docs/architecture/repository-map.md
+docs/architecture/workspace-inventory.md
+.codex/workspace-status.md
 
 Do not edit other architecture files yet.
+
+Mark `Repository discovery` complete only when every in-scope Git boundary has
+been inspected. Otherwise leave it incomplete and record the blocking gaps.

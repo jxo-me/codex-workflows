@@ -1,6 +1,6 @@
 Analyze every repository identified in:
 
-docs/architecture/repository-map.md
+docs/architecture/workspace-inventory.md
 
 Do not modify production code.
 
@@ -38,6 +38,7 @@ repo/path:symbol
 Update:
 
 docs/architecture/repository-map.md
+.codex/workspace-status.md
 
 At the end include:
 
@@ -45,3 +46,7 @@ UNKNOWN
 UNCERTAIN
 POTENTIAL_COUPLING
 NEEDS_VERIFICATION
+
+Mark `Repository analysis` complete only when all repositories from the
+inventory have evidence-backed responsibility, interface, dependency, data,
+test, and operational coverage.

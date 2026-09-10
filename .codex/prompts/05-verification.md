@@ -35,6 +35,10 @@ Correct documentation only when code evidence supports the correction.
 
 Do not modify production code.
 
+Write the independent review report to:
+
+docs/generated/documentation-verification.md
+
 Finally produce a section:
 
 Workspace Readiness
@@ -46,3 +50,7 @@ READY_WITH_GAPS
 NOT_READY
 
 and list remaining gaps.
+
+Update `.codex/workspace-status.md`. Mark `Documentation verification`
+complete only after every in-scope document has been checked. Do not mark the
+Workspace READY in this phase; AGENTS.md finalization is still required.
